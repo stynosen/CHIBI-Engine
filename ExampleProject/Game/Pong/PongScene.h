@@ -14,4 +14,3 @@ private:
 	PongScene(PongScene& t);
 	PongScene& operator=(PongScene& t);
 };
-
