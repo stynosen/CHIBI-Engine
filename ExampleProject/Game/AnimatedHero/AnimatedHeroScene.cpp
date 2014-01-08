@@ -27,7 +27,7 @@ void AnimatedHeroScene::LoadContent()
 	CHIBI->GetImageManager()->AddTexture(_T("Resources/Images/Hero.bmp"), _T("Hero"));
 }
 
-bool AnimatedHeroScene::Initialise()
+bool AnimatedHeroScene::Initialize()
 {
 	bool succes = true;
 	
@@ -36,7 +36,7 @@ bool AnimatedHeroScene::Initialise()
 	heroPtr->PlayAnimation(_T("IdleDown"));
 	heroPtr->SetForceUpdate(true);
 
-	auto keysUIPtr = new GameUI();
+	auto* keysUIPtr = new GameUI();
 	AddGameObjectToScene(heroPtr);
 	AddGameObjectToScene(keysUIPtr);
 

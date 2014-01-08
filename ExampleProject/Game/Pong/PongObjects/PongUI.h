@@ -11,7 +11,7 @@ public:
 	PongUI();
 	virtual ~PongUI();
 
-	virtual bool Initialise();
+	virtual bool Initialize();
 	virtual void Update();
 private:
 	UIString* m_ScoreDigitsPtr;

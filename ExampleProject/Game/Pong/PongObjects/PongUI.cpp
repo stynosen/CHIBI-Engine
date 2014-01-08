@@ -16,7 +16,7 @@ PongUI::~PongUI()
 {
 }
 
-bool PongUI::Initialise()
+bool PongUI::Initialize()
 {
 	//Create UI
 	auto UIPtr = new UI();
@@ -27,7 +27,7 @@ bool PongUI::Initialise()
 	//Add score to UI
 	UIPtr->AddElement(m_ScoreDigitsPtr);
 
-	return GameObject::Initialise();
+	return GameObject::Initialize();
 }
 
 void PongUI::Update()

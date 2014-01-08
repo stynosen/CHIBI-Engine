@@ -21,7 +21,7 @@ Paddle::~Paddle()
 {
 }
 
-bool Paddle::Initialise()
+bool Paddle::Initialize()
 {
 	//Be optimistic
 	bool succes = true;
@@ -34,24 +34,24 @@ bool Paddle::Initialise()
 	CreateBoundingRect(Rect(Vector2(0, 0), m_Size));
 
 	//Give a name to the object so it can be found in the scene
-	tstring name = "Paddle";
+	tstring name = _T("Paddle");
 	if (m_IsLeft)
 	{
-		name += "Left";
+		name += _T("Left");
 		SetPosition(Vector2(-(CHIBI->GetD3DXInit()->GetWidth() / 2) + 100, 0));
 	}
 	else
 	{
-		name += "Right";
+		name += _T("Right");
 		SetPosition(Vector2((CHIBI->GetD3DXInit()->GetWidth() / 2) - 100, 0));
 	}
 	SetName(name);
 
-	//Initialise before craeting the hitregion so the position of the boudningbox matches the world position instead of local position
-	succes = GameObject::Initialise();
+	//Initialize before creating the hit region so the position of the bounding-box matches the world position instead of local position
+	succes = GameObject::Initialize();
 
-	//Create a hitregion for the paddle.
-	//The paddle itself doensn't need to check anything since the ball will be checking for the paddles.
+	//Create a hit region for the paddle.
+	//The paddle itself doesn't need to check anything since the ball will be checking for the paddles.
 	GetScene()->GetCollisionManager()->CreateHitRegionForObject(this, _T("Paddle"));
 
 	return succes;
@@ -59,7 +59,7 @@ bool Paddle::Initialise()
 
 void Paddle::Update()
 {
-	//Translate accoring to the keypressed
+	//Translate according to the key pressed
 	if (CHIBI->GetInputManager()->CheckKeyState(m_UpButton, KEYSTATE_DOWN))
 		Translate(-m_Speed*CHIBI->GetDeltaTime());
 

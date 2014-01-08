@@ -1,41 +1,41 @@
 <?xml version="1.0"?>
 <Animations>
-  <AnimationSet name="Hero">
-    <Animation name="IdleRight" flags="0">
-      <frame posX="0" posY="96" width="32" height="48" length="0" texture="Hero"/>
-    </Animation>
-    <Animation name="IdleLeft" flags="0">
-      <frame posX="0" posY="48" width="32" height="48" length="0" texture="Hero"/>
-    </Animation>
-    <Animation name="IdleUp" flags="0">
-      <frame posX="0" posY="144" width="32" height="48" length="0" texture="Hero"/>
-    </Animation>
-    <Animation name="IdleDown" flags="0">
-      <frame posX="0" posY="0" width="32" height="48" length="0" texture="Hero"/>
-    </Animation>
-    <Animation name="WalkingRight" flags="1">
-      <frame posX="0" posY="96" width="32" height="48" length="0.15" texture="Hero"/>
-      <frame posX="32" posY="96" width="32" height="48" length="0.15" texture="Hero"/>
-      <frame posX="64" posY="96" width="32" height="48" length="0.15" texture="Hero"/>
-      <frame posX="96" posY="96" width="32" height="48" length="0.15" texture="Hero"/>
-    </Animation>
-    <Animation name="WalkingLeft" flags="1">
-      <frame posX="160" posY="48" width="32" height="48" length="0.15" texture="Hero"/>
-      <frame posX="192" posY="48" width="32" height="48" length="0.15" texture="Hero"/>
-      <frame posX="224" posY="48" width="32" height="48" length="0.15" texture="Hero"/>
-      <frame posX="256" posY="48" width="32" height="48" length="0.15" texture="Hero"/>
-    </Animation>
-    <Animation name="WalkingUp" flags="1">
-      <frame posX="0" posY="144" width="32" height="48" length="0.15" texture="Hero"/>
-      <frame posX="32" posY="144" width="32" height="48" length="0.15" texture="Hero"/>
-      <frame posX="64" posY="144" width="32" height="48" length="0.15" texture="Hero"/>
-      <frame posX="96" posY="144" width="32" height="48" length="0.15" texture="Hero"/>
-    </Animation>
-    <Animation name="WalkingDown" flags="1">
-      <frame posX="160" posY="0" width="32" height="48" length="0.15" texture="Hero"/>
-      <frame posX="192" posY="0" width="32" height="48" length="0.15" texture="Hero"/>
-      <frame posX="224" posY="0" width="32" height="48" length="0.15" texture="Hero"/>
-      <frame posX="256" posY="0" width="32" height="48" length="0.15" texture="Hero"/>
-    </Animation>
-  </AnimationSet>
+	<AnimationSet name="Hero">
+		<Animation name="IdleRight" flags="0">
+			<frame posX="0" posY="96" width="32" height="48" length="0" texture="Hero"/>
+		</Animation>
+		<Animation name="IdleLeft" flags="0">
+			<frame posX="0" posY="48" width="32" height="48" length="0" texture="Hero"/>
+		</Animation>
+		<Animation name="IdleUp" flags="0">
+			<frame posX="0" posY="144" width="32" height="48" length="0" texture="Hero"/>
+		</Animation>
+		<Animation name="IdleDown" flags="0">
+			<frame posX="0" posY="0" width="32" height="48" length="0" texture="Hero"/>
+		</Animation>
+		<Animation name="WalkingRight" flags="1">
+			<frame posX="0" posY="96" width="32" height="48" length="0.15" texture="Hero"/>
+			<frame posX="32" posY="96" width="32" height="48" length="0.15" texture="Hero"/>
+			<frame posX="64" posY="96" width="32" height="48" length="0.15" texture="Hero"/>
+			<frame posX="96" posY="96" width="32" height="48" length="0.15" texture="Hero"/>
+		</Animation>
+		<Animation name="WalkingLeft" flags="1">
+			<frame posX="0" posY="48" width="32" height="48" length="0.15" texture="Hero"/>
+			<frame posX="32" posY="48" width="32" height="48" length="0.15" texture="Hero"/>
+			<frame posX="64" posY="48" width="32" height="48" length="0.15" texture="Hero"/>
+			<frame posX="96" posY="48" width="32" height="48" length="0.15" texture="Hero"/>
+		</Animation>
+		<Animation name="WalkingUp" flags="1">
+			<frame posX="0" posY="144" width="32" height="48" length="0.15" texture="Hero"/>
+			<frame posX="32" posY="144" width="32" height="48" length="0.15" texture="Hero"/>
+			<frame posX="64" posY="144" width="32" height="48" length="0.15" texture="Hero"/>
+			<frame posX="96" posY="144" width="32" height="48" length="0.15" texture="Hero"/>
+		</Animation>
+		<Animation name="WalkingDown" flags="1">
+			<frame posX="0" posY="0" width="32" height="48" length="0.15" texture="Hero"/>
+			<frame posX="32" posY="0" width="32" height="48" length="0.15" texture="Hero"/>
+			<frame posX="64" posY="0" width="32" height="48" length="0.15" texture="Hero"/>
+			<frame posX="96" posY="0" width="32" height="48" length="0.15" texture="Hero"/>
+		</Animation>
+	</AnimationSet>
 </Animations>

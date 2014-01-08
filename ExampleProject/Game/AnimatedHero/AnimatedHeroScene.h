@@ -7,7 +7,7 @@ public:
 	AnimatedHeroScene(void);
 	virtual ~AnimatedHeroScene(void);
 	void LoadContent();
-	bool Initialise();
+	bool Initialize();
 private:
 	
 private:

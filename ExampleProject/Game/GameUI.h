@@ -11,7 +11,7 @@ public:
 	GameUI();
 	virtual ~GameUI();
 
-	virtual bool Initialise();
+	virtual bool Initialize();
 private:
 
 	GameUI(const GameUI& t);

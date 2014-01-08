@@ -19,7 +19,7 @@ Ball::~Ball()
 {
 }
 
-bool Ball::Initialise()
+bool Ball::Initialize()
 {
 	//Be optimistic
 	bool succes = true;
@@ -37,8 +37,8 @@ bool Ball::Initialise()
 	//call the respawn method so the ball has a random direction and the correct position and speed
 	Respawn();
 
-	//Initialise before craeting the hitregion so the position of the boudningbox matches the world position instead of local position
-	succes = GameObject::Initialise();
+	//Initialize before craeting the hitregion so the position of the boudningbox matches the world position instead of local position
+	succes = GameObject::Initialize();
 
 	//Use the collision manager to detect collision with a paddle
 	auto hitRegionPtr = GetScene()->GetCollisionManager()->CreateHitRegionForObject(this, _T("Ball"));

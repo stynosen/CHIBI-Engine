@@ -9,7 +9,7 @@ public :
 	Ball();
 	virtual ~Ball();
 
-	virtual bool Initialise();
+	virtual bool Initialize();
 	virtual void Update();
 
 	void Respawn();

@@ -31,7 +31,7 @@ void PongScene::LoadContent()
 	CHIBI->GetFontManager()->AddFont(UIFont);
 }
 
-bool PongScene::Initialise()
+bool PongScene::Initialize()
 {
 	bool succes = true;
 	

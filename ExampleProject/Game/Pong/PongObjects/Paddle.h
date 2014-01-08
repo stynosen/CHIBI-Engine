@@ -9,7 +9,7 @@ public :
 	Paddle(bool left, int upButton, int downButton);
 	virtual ~Paddle();
 
-	virtual bool Initialise();
+	virtual bool Initialize();
 	virtual void Update();
 
 	UINT GetScore();

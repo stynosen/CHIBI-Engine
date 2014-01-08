@@ -7,7 +7,7 @@ public:
 	PongScene(void);
 	virtual ~PongScene(void);
 	void LoadContent();
-	bool Initialise();
+	bool Initialize();
 private:
 	
 private:

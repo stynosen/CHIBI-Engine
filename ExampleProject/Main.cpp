@@ -1,9 +1,25 @@
 #include "Main.h"
+//--------------------------------------------------------------------------
+//To change the game, change the following function to suit your game class
+//eg. Change ExampleProject to SpaceInvaders
+//	
+//		#define GAME SpaceInvaders
+//		#include "SpaceInvaders.h"
+//
+//-------------------------------------------------------------------------
 
+#define GAME ExampleProject
 #include "ExampleProject.h"
+
+
+//--------------------------------------------------------------------------
+// This file contains code to start the actual game application.
+// I strongly suggest that you don't change anything below this point
+// Only make changes in this file if you know what you are doing!!
+//-------------------------------------------------------------------------
 void RunGame(HINSTANCE hInstance)
 {
-	ExampleProject* pGameApp = new ExampleProject(hInstance);
+	GAME* pGameApp = new GAME(hInstance);
 	//Run the game loop
 	pGameApp->Run();
 	delete pGameApp;

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="11.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -11,23 +11,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F16EEDF2-89E0-43EA-A3A2-24E5E5C75F25}</ProjectGuid>
-    <RootNamespace>ExampleProject</RootNamespace>
+    <ProjectGuid>{5BD3D395-7A25-4B2D-A03E-732944DB4E50}</ProjectGuid>
+    <RootNamespace>KeenPP</RootNamespace>
     <ProjectName>ExampleProject</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -40,54 +40,44 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\CHIBI-Engine;$(ProjectDir);$(DXSDK_DIR)\include</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(DXSDK_DIR)\lib\x86;..\CHIBI-Engine</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);%(AdditionalIncludeDirectories);$(DXSDK_DIR)\include;$(IncludePath);$(ProjectDir)\..\CHIBI-Engine</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)\lib\x86;$(LibraryPath);$(ProjectDir);%(AdditionalIncludeDirectories);$(ProjectDir)\..\CHIBI-Engine\lib;$(VC_IncludePath);$(IntDir)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\CHIBI-Engine;$(ProjectDir);$(DXSDK_DIR)\include</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(DXSDK_DIR)\lib\x86;..\CHIBI-Engine</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);%(AdditionalIncludeDirectories);$(DXSDK_DIR)\include;$(IncludePath);$(ProjectDir)\..\CHIBI-Engine</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)\lib\x86;$(LibraryPath);$(ProjectDir);%(AdditionalIncludeDirectories);$(ProjectDir)\..\CHIBI-Engine\lib;$(VC_IncludePath);$(IntDir)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PrecompiledHeaderFile />
+      <PreprocessorDefinitions>_MSC_PLATFORM_TOOLSET=$(PlatformToolsetVersion);DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MSC_PLATFORM_TOOLSET=$(PlatformToolsetVersion);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Game\AnimatedHero\AnimatedHeroScene.cpp" />
-    <ClCompile Include="Game\AnimatedHero\Hero.cpp" />
-    <ClCompile Include="Game\GameUI.cpp" />
-    <ClCompile Include="Game\Pong\PongObjects\Ball.cpp" />
-    <ClCompile Include="Game\Pong\PongObjects\Paddle.cpp" />
-    <ClCompile Include="Game\Pong\PongObjects\PongUI.cpp" />
-    <ClCompile Include="Game\Pong\PongScene.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="ExampleProject.cpp" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="ExampleProject.h" />
     <ClInclude Include="Game\AnimatedHero\AnimatedHeroScene.h" />
     <ClInclude Include="Game\AnimatedHero\Hero.h" />
     <ClInclude Include="Game\GameUI.h" />
@@ -96,8 +86,17 @@
     <ClInclude Include="Game\Pong\PongObjects\PongUI.h" />
     <ClInclude Include="Game\Pong\PongScene.h" />
     <ClInclude Include="Main.h" />
-    <ClInclude Include="ExampleProject.h" />
-    <ClInclude Include="Scenes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ExampleProject.cpp" />
+    <ClCompile Include="Game\AnimatedHero\AnimatedHeroScene.cpp" />
+    <ClCompile Include="Game\AnimatedHero\Hero.cpp" />
+    <ClCompile Include="Game\GameUI.cpp" />
+    <ClCompile Include="Game\Pong\PongObjects\Ball.cpp" />
+    <ClCompile Include="Game\Pong\PongObjects\Paddle.cpp" />
+    <ClCompile Include="Game\Pong\PongObjects\PongUI.cpp" />
+    <ClCompile Include="Game\Pong\PongScene.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

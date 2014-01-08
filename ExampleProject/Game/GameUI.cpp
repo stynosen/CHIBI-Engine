@@ -14,7 +14,7 @@ GameUI::~GameUI()
 {
 }
 
-bool GameUI::Initialise()
+bool GameUI::Initialize()
 {
 	//Create UI
 	auto UIPtr = new UI();
@@ -25,5 +25,5 @@ bool GameUI::Initialise()
 	//Add score to UI
 	UIPtr->AddElement(keysHelpPtr);
 
-	return GameObject::Initialise();
+	return GameObject::Initialize();
 }
