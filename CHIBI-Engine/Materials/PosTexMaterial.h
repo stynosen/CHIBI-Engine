@@ -6,6 +6,7 @@
 // PosNormTexMaterial Class									
 //-----------------------------------------------------
 
+//!A material that uses the textured material
 class PosTexMaterial : public BaseMaterial
 {
 public:

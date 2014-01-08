@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Animations>
+  <AnimationSet name="Slug">
+    <Animation name="WalkLeft" flags="1">
+      <frame posX="48" posY="0" width="24" height="24" length="0.5" texture="Slug"/>
+      <frame posX="72" posY="0" width="24" height="24" length="0.5" texture="Slug"/>
+    </Animation>
+    <Animation name="WalkRight" flags="1">
+      <frame posX="0" posY="0" width="24" height="24" length="0.5" texture="Slug"/>
+      <frame posX="24" posY="0" width="24" height="24" length="0.5" texture="Slug"/>
+    </Animation>
+    <Animation name="ShitLeft" flags="0">
+      <frame posX="48" posY="24" width="24" height="24" length="0.5" texture="Slug"/>
+      <frame posX="72" posY="24" width="24" height="24" length="0" texture="Slug"/>
+      </Animation>
+    <Animation name="ShitRight" flags="0">
+      <frame posX="0" posY="24" width="24" height="24" length="0.5" texture="Slug"/>
+      <frame posX="24" posY="24" width="24" height="24" length="0" texture="Slug"/>
+      </Animation>
+    <Animation name="Dead" flags="0">
+      <frame posX="0" posY="48" width="24" height="24" length="0.15" texture="Slug"/>
+      </Animation>
+  </AnimationSet>
+  <AnimationSet name="Slime">
+    <Animation name="Base" flags="0">
+      <frame posX="0" posY="0" width="16" height="7" length="0" texture="Slime"/>
+    </Animation>
+    <Animation name="Fade" flags="0">
+      <frame posX="16" posY="0" width="16" height="7" length="0" texture="Slime"/>
+    </Animation>
+  </AnimationSet>
+</Animations>

@@ -5,20 +5,28 @@
 #include "GameObject.h"
 #include <vector>
 
+//!A rectangle with a certain color
 class FilledRect : public GameObject
 {
 public:
 	FilledRect(const D3DXCOLOR& color, double width, double height);
 	virtual ~FilledRect(void);
 	
+	//!Change the color of the rectangle
 	void SetColor(const D3DXCOLOR& color);
 
+	//!Draw the rectangle on screen or world position
+	/*!True : Screen position
+	False : World position*/
 	void DrawOnScreenPos(bool state);
-	bool Initialise();
-	void Paint();
 
+	virtual bool Initialize();
+	virtual void Paint();
+
+	//!Get the material that used to draw the filled rectangle
 	PosColorMaterial*	GetMaterial();
 
+	//!Get the size of the rectangle
 	const Vector2& GetSize()const;
 
 private:

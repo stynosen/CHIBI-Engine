@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Animations>
+  <AnimationSet name="Mushroom">
+    <Animation name="Right" flags="0">
+      <frame posX="0" posY="0" width="32" height="31" length="0" texture="Mushroom"/>
+      <frame posX="32" posY="0" width="32" height="31" length="0" texture="Mushroom"/>
+    </Animation>
+    <Animation name="Left" flags="0">
+      <frame posX="64" posY="0" width="32" height="31" length="0" texture="Mushroom"/>
+      <frame posX="96" posY="0" width="32" height="31" length="0" texture="Mushroom"/>
+    </Animation>
+  </AnimationSet>
+</Animations>

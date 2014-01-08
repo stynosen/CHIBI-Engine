@@ -8,23 +8,30 @@
 #include "MainData.h"
 #include "DXGIDebug.h"
 
+//!The struct that stores all window settings
 struct GameSettings
 {
+	//!Window width
 	UINT width;
+	//!Window height
 	UINT height;
+	//!Window title
 	std::tstring windowTitle;
+	//!Enable the user to resize the window?
 	bool enableResize;
+	//!Background color of the application
 	D3DXCOLOR bgColor;
 };
 
+//!The beating heart of the graphics in the engine
 class D3DXInitialiser
 {
 public:
 	D3DXInitialiser(HINSTANCE hInstance);
 	virtual ~D3DXInitialiser(void);
 	
-	//Public memberfunctions
-	bool						Initialise();
+	//Public methods
+	bool						Initialize();
 	bool						OnResize();
 
 	static LRESULT CALLBACK		WndProcStatic (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
@@ -59,7 +66,7 @@ public:
 
 
 private:
-	//Private memberfunctions
+	//Private methods
 	bool						OpenWindow();
 	HRESULT						CreateD3DDeviceAndSwapchain(IDXGIAdapter *pAdapter, D3D10_DRIVER_TYPE driverType, UINT flags, ID3D10Device1 **ppDevice, IDXGISwapChain **ppswapChain);
 	bool						InitializeDirectX();

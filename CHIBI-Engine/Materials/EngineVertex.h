@@ -1,6 +1,7 @@
 #pragma once
 #include "MainData.h"
 
+//!Struct to store vertex data for a shader that only uses position
 struct VertexPos
 {
 	//default constructor
@@ -28,6 +29,7 @@ struct VertexPos
 };
 
 
+//!Struct to store vertex data for a shader that only uses position and texture coordinates
 struct VertexPosTex
 {
 	//default constructor
@@ -58,6 +60,7 @@ struct VertexPosTex
 	D3DXVECTOR2 tex;
 };
 
+//!Struct to store vertex data for the tile shader
 struct VertexTileInstanceData
 {
 	//Default constructor

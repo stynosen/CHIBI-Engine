@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Animations>
+  <AnimationSet name="Bullet">
+	  <Animation name="Fly" flags="1">
+		  <frame posX="0" posY="0" width="16" height="16" length="0.2" texture="Bullet"/>
+		  <frame posX="16" posY="0" width="16" height="16" length="0.2" texture="Bullet"/>
+		  <frame posX="32" posY="0" width="16" height="16" length="0.2" texture="Bullet"/>
+	  </Animation>
+	  <Animation name="Explode" flags="0">
+		  <frame posX="0" posY="16" width="16" height="16" length="0.15" texture="Bullet"/>
+		  <frame posX="16" posY="16" width="16" height="16" length="0.15" texture="Bullet"/>
+		  <frame posX="32" posY="16" width="16" height="16" length="0.15" texture="Bullet"/>
+		  <frame posX="48" posY="16" width="16" height="16" length="0" texture="Bullet"/>
+	  </Animation>
+  </AnimationSet>
+</Animations>

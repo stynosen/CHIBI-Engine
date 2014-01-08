@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<Animations>
+  <AnimationSet name="Hero">
+    <Animation name="IdleRight" flags="0">
+      <frame posX="0" posY="0" width="32" height="40" length="0.15" texture="Keen"/>
+    </Animation>
+    <Animation name="IdleLeft" flags="0">
+      <frame posX="160" posY="0" width="32" height="40" length="0.15" texture="Keen"/>
+    </Animation>
+    <Animation name="WalkingRight" flags="1">
+      <frame posX="0" posY="40" width="32" height="40" length="0.15" texture="Keen"/>
+      <frame posX="32" posY="40" width="32" height="40" length="0.15" texture="Keen"/>
+      <frame posX="64" posY="40" width="32" height="40" length="0.15" texture="Keen"/>
+      <frame posX="96" posY="40" width="32" height="40" length="0.15" texture="Keen"/>
+    </Animation>
+    <Animation name="WalkingLeft" flags="1">
+      <frame posX="160" posY="40" width="32" height="40" length="0.15" texture="Keen"/>
+      <frame posX="192" posY="40" width="32" height="40" length="0.15" texture="Keen"/>
+      <frame posX="224" posY="40" width="32" height="40" length="0.15" texture="Keen"/>
+      <frame posX="256" posY="40" width="32" height="40" length="0.15" texture="Keen"/>
+    </Animation>
+    <Animation name="JumpingRight" flags="0">
+      <frame posX="0" posY="80" width="32" height="40" length="0" texture="Keen"/>
+      <frame posX="32" posY="80" width="32" height="40" length="0" texture="Keen"/>
+      <frame posX="64" posY="80" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="JumpingLeft" flags="0">
+      <frame posX="160" posY="80" width="32" height="40" length="0" texture="Keen"/>
+      <frame posX="192" posY="80" width="32" height="40" length="0" texture="Keen"/>
+      <frame posX="224" posY="80" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="PogoRight" flags="0">
+      <frame posX="0" posY="120" width="32" height="40" length="0" texture="Keen"/>
+      <frame posX="32" posY="120" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="PogoLeft" flags="0">
+      <frame posX="160" posY="120" width="32" height="40" length="0" texture="Keen"/>
+      <frame posX="192" posY="120" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="LookUp" flags="0">
+      <frame posX="0" posY="160" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="LookBack" flags="0">
+      <frame posX="0" posY="360" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="LookDown" flags="0">
+      <frame posX="160" posY="160" width="32" height="40" length="0.25" texture="Keen"/>
+      <frame posX="192" posY="160" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="WalkShootRight" flags="0">
+      <frame posX="0" posY="200" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="JumpShootRight" flags="0">
+      <frame posX="32" posY="200" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="WalkShootLeft" flags="0">
+      <frame posX="64" posY="200" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="JumpShootLeft" flags="0">
+      <frame posX="96" posY="200" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="JumpShootDown" flags="0">
+      <frame posX="160" posY="200" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="WalkShootUp" flags="0">
+      <frame posX="192" posY="200" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="JumpShootUp" flags="0">
+      <frame posX="224" posY="200" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="SlideIdleRight" flags="0">
+      <frame posX="0" posY="240" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="SlideIdleLeft" flags="0">
+      <frame posX="160" posY="240" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="SlideUpRight" flags="1">
+      <frame posX="0" posY="240" width="32" height="40" length="0.25" texture="Keen"/>
+      <frame posX="32" posY="240" width="32" height="40" length="0.25" texture="Keen"/>
+      <frame posX="64" posY="240" width="32" height="40" length="0.25" texture="Keen"/>
+    </Animation>
+    <Animation name="SlideUpLeft" flags="1">
+      <frame posX="160" posY="240" width="32" height="40" length="0.25" texture="Keen"/>
+      <frame posX="192" posY="240" width="32" height="40" length="0.25" texture="Keen"/>
+      <frame posX="224" posY="240" width="32" height="40" length="0.25" texture="Keen"/>
+    </Animation>
+    <Animation name="SlideDown" flags="1">
+      <frame posX="0"   posY="280" width="32" height="40" length="0.15" texture="Keen"/>
+      <frame posX="32"  posY="280" width="32" height="40" length="0.15" texture="Keen"/>
+      <frame posX="64"  posY="280" width="32" height="40" length="0.15" texture="Keen"/>
+      <frame posX="96"  posY="280" width="32" height="40" length="0.15" texture="Keen"/>
+    </Animation>
+    <Animation name="SlideShootRight" flags="0">
+      <frame posX="0" posY="320" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="SlideShootLeft" flags="0">
+      <frame posX="160" posY="320" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="SlideShootUpRight" flags="0">
+      <frame posX="32" posY="320" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="SlideShootUpLeft" flags="0">
+      <frame posX="192" posY="320" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="SlideShootDownRight" flags="0">
+      <frame posX="64" posY="320" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="SlideShootDownLeft" flags="0">
+      <frame posX="224" posY="320" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+    <Animation name="Enter" flags="0">
+      <frame posX="0" posY="360" width="32" height="40" length="0.2" texture="Keen"/>
+      <frame posX="32" posY="360" width="32" height="40" length="0.2" texture="Keen"/>
+      <frame posX="64" posY="360" width="32" height="40" length="0.2" texture="Keen"/>
+      <frame posX="96" posY="360" width="32" height="40" length="0.2" texture="Keen"/>
+      <frame posX="128" posY="360" width="32" height="40" length="0.2" texture="Keen"/>
+    </Animation>
+    <Animation name="Dead" flags="0">
+      <frame posX="0" posY="400" width="32" height="40" length="0.5" texture="Keen"/>
+      <frame posX="32" posY="400" width="32" height="40" length="0" texture="Keen"/>
+    </Animation>
+  </AnimationSet>
+</Animations>

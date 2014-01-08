@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Animations>
+  <AnimationSet name="Drop">
+	  <Animation name="Base" flags="1">
+		  <frame posX="0"   posY="0" width="16" height="16" length="0.2" texture="Drop"/>
+		  <frame posX="16"  posY="0" width="16" height="16" length="0.2" texture="Drop"/>
+		  <frame posX="32"  posY="0" width="16" height="16" length="0.2" texture="Drop"/>
+      <frame posX="48"  posY="0" width="16" height="16" length="0.2" texture="Drop"/>
+	  </Animation>
+	  <Animation name="Picked" flags="0">
+		  <frame posX="0"   posY="16"   width="16"  height="16" length="0.15" texture="Drop"/>
+		  <frame posX="16"  posY="16"   width="16"  height="16" length="0.15" texture="Drop"/>
+		  <frame posX="32"  posY="16"   width="16"  height="16" length="0.15" texture="Drop"/>
+		  <frame posX="48"  posY="16"   width="16"  height="16" length="0"    texture="Drop"/>
+	  </Animation>
+  </AnimationSet>
+</Animations>

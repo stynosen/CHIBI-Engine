@@ -12,64 +12,52 @@ using namespace std;
 class Camera;
 class GameObject;
 class CollisionManager;
+class SceneManager;
+class ChibiEngine;
 
+//!A class that stores and manages game objects
 class Scene
 {
 public:
 	Scene(void);
 	virtual ~Scene(void);
 
-	//Load content in this method
-	//You can load content elsewhere but this will be called in the beginning of the game
+	//!Load content in this method
+	/*!You can load content elsewhere but this will be called in the beginning of the game*/
 	virtual void LoadContent() = 0;
 
-	//Initialise the scene
-	//This will be called by the scenemanager
-	bool InitialiseScene();
-
-	//Paint the scene
-	//This will be called by the scenemanager
-	void PaintScene();
-
-	//Update the scene
-	//This will be called by the scenemanager
-	void UpdateScene();
-
-	//This method is called when the screen has been resized
-	void Resize();
-
-	//Add a gameobject to the scene.
-	//You can put it in the back or in the front (in case the draw/update order is important)
+	//!Add a GameObject to the scene.
+	/*!You can put it in the back or in the front (in case the draw/update order is important)*/
 	void AddGameObjectToScene(GameObject* gameObject, bool front = false);
 
-	//Remove a gameobject from the scene
-	//Use the bool to controll whether the object is deleted from the memory or should be kept
+	//!Remove a GameObject from the scene
+	/*!Use the boolean to control whether the object is deleted from the memory or should be kept*/
 	void RemoveGameObjectFromScene(GameObject* gameObject, bool deleteMe = true);
 
-	//Serialize data
+	//!Serialize data
 	//Not fully implemented yet, use at own risk
 	void SaveData();
 
-	//Is the object initialized?
-	//Usefull for optimisations or validity checks
-	bool IsInitialised()const;
+	//!Is the object initialized?
+	/*!Useful for optimizations or validity checks*/
+	bool IsInitialized()const;
 
-	//Get the active camera
+	//!Get the active camera
 	Camera* GetActiveCamera();
 
-	//Set the active camera
-	//The old camera won't be stored! Make sure you either store it, or delete it
+	//!Set the active camera
+	/*!The old camera won't be stored! Make sure you either store it, or delete it*/
 	Camera*	SetActiveCamera(Camera* newCam);
 
-	//Get the collision manager of this scene
-	//If there is none, it will be created at the first call
+	//!Get the collision manager of this scene
+	/*!If there is none, it will be created at the first call*/
 	CollisionManager* GetCollisionManager();
 
-	//Add a gameobject to the scene with a name
-	//This way the gameobject can be retrieved from the scene at any point
+	//!Add a GameObject to the scene with a name
+	/*!This way the GameObject can be retrieved from the scene at any point*/
 	void AddGameObjectByName(GameObject* gameObjectPtr, tstring& inOutName);
 
-	//Get a gameobject from the scene that has been added with a name
+	//!Get a GameObject from the scene that has been added with a name
 	template <class T>
 	T* GetGameobjectByName(const tstring& name)
 	{
@@ -82,7 +70,7 @@ public:
 		GameObject* objectPtr = m_GameObjectsByName[name];
 		if (objectPtr == nullptr)
 			return nullptr;
-		//Check if the object actualy is of the type
+		//Check if the object actually is of the type
 		T* dObjectPtr = DCAST<T*>(objectPtr);
 		return dObjectPtr;
 	}
@@ -90,45 +78,65 @@ public:
 protected:
 
 private:
-	//This method will do the actual deletion of the gameobjects (to prevent invalid iterator)
+	friend SceneManager;
+	//!Initialize the scene
+	/*!This will be called by the SceneManager*/
+	bool InitialiseScene();
+
+	friend SceneManager;
+	//!Paint the scene
+	/*!This will be called by the SceneManager*/
+	void PaintScene();
+
+	friend SceneManager;
+	//!Update the scene
+	/*!This will be called by the SceneManager*/
+	void UpdateScene();
+
+	friend SceneManager;
+	friend ChibiEngine;
+	//!This method is called when the screen has been resized
+	void Resize();
+
+	//!This method will do the actual deletion of the GameObjects (to prevent invalid iterator)
 	void		RemoveGameobjects();
 
-	//This lethod will do the actual adding of the new objects (to prevent invalid iterator)
+	//!This method will do the actual adding of the new objects (to prevent invalid iterator)
 	void		AddGameObjects();
 
-	//Overload this method to write the scene initialisation
-	//All gameobjects will be initialised automatically by the scene!
-	virtual bool Initialise(){ return true; };
+	//!Overload this method to write the scene initialization
+	/*!All GameObjects will be initialized automatically by the scene!*/
+	virtual bool Initialize(){ return true; };
 
-	//Overload this method to write the scene painting
-	//All gameobjects will be painted automatically by the scene!
+	//!Overload this method to write the scene painting
+	/*!All GameObjects will be painted automatically by the scene!*/
 	virtual void Paint(){};
 
-	//Overload this method to write the scene updating
-	//All gameobjects will be updated automatically by the scene!
+	//!Overload this method to write the scene updating
+	/*!All GameObjects will be updated automatically by the scene!*/
 	virtual void Update(){};
 
-	//Is the scene initialised
+	//!Is the scene initialized
 	bool						m_Initialised;
 
-	//The pointer to the active camera
+	//!The pointer to the active camera
 	Camera*						m_ActiveCamera;
 
-	//A list with all the gameobjects in the scene
-	//It's a list so you can swap objects and change positions 
+	//!A list with all the GameObjects in the scene
+	/*!It's a list so you can swap objects and change positions */
 	list<GameObject*>			m_GameObjects;
 
-	//A map to store all the gameobjects that need to be added next update
+	//!A map to store all the GameObjects that need to be added next update
 	map<GameObject*, bool>		m_GameObjectsToAddVec;
 
-	//A map to store all the gameobjects that need to be removed next update
+	//!A map to store all the GameObjects that need to be removed next update
 	map<GameObject*, bool>		m_GameObjectsToRemoveVec;
 
-	//A map to retrieve a gameobject by it's name
+	//!A map to retrieve a GameObjects by it's name
 	map<tstring, GameObject*>	m_GameObjectsByName;
 
-	//The adress of the collision manager of this scene
-	//It is also possible that there is none (eg. for tools)
+	//!The address of the collision manager of this scene
+	/*!It is also possible that there is none (eg. for tools)*/
 	CollisionManager*			m_CollisionManagerPtr;
 
 private:

@@ -7,31 +7,50 @@
 
 using namespace std;
 class Camera;
-//-----------------------------------------------------
-// PosNormTexMaterial Class									
-//-----------------------------------------------------
 
+//!The Base material class
+/*!You can create custom materials by inheriting this class*/
 class BaseMaterial
 {
 public:
-	BaseMaterial();				// Constructor
-	virtual ~BaseMaterial();		// Destructor
+	BaseMaterial();	
+	virtual ~BaseMaterial();
 
+	//!Link the effect to this material
+	/*!Don't forget to add the effect to the EffectManager before using it in a material*/
 	void SetEffect(const tstring& effectName);
+
+	//!update the world, view and projection matrix of the material
+	/*!This should be called in the Draw method of the object that uses this material*/
 	void UpdateMatrix(const D3DXMATRIX& matWorld, Camera* cameraPtr);
+
+	//!update the world matrix to draw on screen space instead of world space
+	/*!This should be called in the Draw method of the object that uses this material*/
 	void UpdateMatrixScreen(const D3DXMATRIX& matWorld, Camera* cameraPtr);
+
+	//!Set the draw priority of the material
+	/*!The highest priority will be drawn first (behind everything else)*/
 	void SetDrawPriority(int priority);
 
+	//!Get the pointer to the current technique
 	ID3D10EffectTechnique* GetTechnique();
+
+	//!Set the technique of the material
+	/*!Make sure that the technique is actually present in the shader file*/
 	bool SetTechnique(const tstring& techniqueName);
-	//-------------------------------------------------
-	// Inherited Methods							
-	//-------------------------------------------------
+
+	//!Push all the effects to the shader
 	void Commit();
 
 protected:
+	//!Set the effect variables out of the shader
 	virtual void SetEffectVariables(){};
+
+	//!Load the effect variables out of the shader
 	virtual void LoadEffectVariables(){};
+
+	//!Create the InputLayout of the shader
+	/*!In a future update this will be automated*/
 	virtual HRESULT CreateInputLayout()=0;
 
 protected:

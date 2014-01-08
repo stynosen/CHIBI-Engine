@@ -2,25 +2,26 @@
 #include "MainData.h"
 #include "Timer.h"
 
+class Timermanager;
+
+//!A timer that starts at 0 and counts up
 class StopWatch final: public Timer
 {
 public:
-	// -------------------------
-	// Constructors & Destructor
-	// -------------------------
-	StopWatch();
-	~StopWatch();
-	// -------------------------
-	// General Methods
-	// -------------------------
-	//Set the current time back to 0
+	//!Set the current time back to 0
 	void Reset(const bool start = false);
 
-	//Call at least once every frame so the counter is ticked. (Normally this is done by the TimerManager)
-	void Update();
 
 private:
 
+	friend TimerManager;
+	StopWatch();
+	friend TimerManager;
+	~StopWatch();
+
+	friend TimerManager;
+	//!Call at least once every frame so the counter is ticked. (Normally this is done by the TimerManager)
+	void Update();
 	StopWatch(StopWatch& t);
 	StopWatch& operator=(StopWatch& t);
 };

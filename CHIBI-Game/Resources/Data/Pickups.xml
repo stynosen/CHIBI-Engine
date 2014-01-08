@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Pickups>
+  <pickup id="0"  name="Coke"       action="PickupCoke"       animation="Coke"/>
+  <pickup id="1"  name="Gum"        action="PickupGum"        animation="Gum"/>
+  <pickup id="2"  name="Chocolate"  action="PickupChocolate"  animation="Chocolate"/>
+  <pickup id="3"  name="Jawbreaker" action="PickupJawbreaker" animation="Jawbreaker"/>
+  <pickup id="4"  name="Doughnut"   action="PickupDoughnut"   animation="Doughnut"/>
+  <pickup id="5"  name="Icecream"   action="PickupIcecream"   animation="Icecream"/>
+  <pickup id="6"  name="GemRed"     action="PickupGemRed"     animation="GemRed"/>
+  <pickup id="7"  name="GemGreen"   action="PickupGemGreen"   animation="GemGreen"/>
+  <pickup id="8"  name="GemBlue"    action="PickupGemBlue"    animation="GemBlue"/>
+  <pickup id="9"  name="GemYellow"  action="PickupGemYellow"  animation="GemYellow"/>
+  <pickup id="10" name="Bullets"    action="PickupBullets"    animation="Gun"/>
+  <pickup id="11" name="Drop"       action="PickupDrop"       animation="Drop"/>
+  <pickup id="12" name="Life"       action="PickupLife"       animation="Life"/>
+</Pickups>

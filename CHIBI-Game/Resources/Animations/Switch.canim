@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Animations>
+  <AnimationSet name="Switch">
+    <Animation name="Off" flags="0">
+      <frame posX="0" posY="0" width="16" height="16" length="0" texture="Switch"/>
+    </Animation>
+    <Animation name="On" flags="0">
+      <frame posX="16" posY="0" width="16" height="16" length="0" texture="Switch"/>
+    </Animation>
+  </AnimationSet>
+</Animations>

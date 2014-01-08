@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Animations>
+  <AnimationSet name="Stars">
+    <Animation name="Base" flags="1">
+      <frame posX="0" posY="0" width="24" height="13" length="0.2" texture="Stars"/>
+      <frame posX="24" posY="0" width="24" height="13" length="0.2" texture="Stars"/>
+    </Animation>
+  </AnimationSet>
+</Animations>

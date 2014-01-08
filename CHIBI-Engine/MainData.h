@@ -1,4 +1,5 @@
 #pragma once
+
 // Let VC++ know we are compiling for WinXP and up.  This let's us use
 // API functions specific to WinXP (e.g., WM_INPUT API).
 #ifndef _WIN32_WINNT

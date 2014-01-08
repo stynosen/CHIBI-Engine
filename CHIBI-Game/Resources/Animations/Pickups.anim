@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<Animations>
+  <AnimationSet name="Coke">
+	  <Animation name="Base" flags="1">
+		  <frame posX="0" posY="0" width="16" height="16" length="0.2" texture="Pickups"/>
+		  <frame posX="16" posY="0" width="16" height="16" length="0.2" texture="Pickups"/>
+	  </Animation>
+	  <Animation name="Picked" flags="0">
+		  <frame posX="32" posY="0" width="32" height="16" length="0" texture="Pickups"/>
+	  </Animation>
+  </AnimationSet>
+  <AnimationSet name="Gum">
+	  <Animation name="Base" flags="1">
+		  <frame posX="0" posY="16" width="16" height="16" length="0.2" texture="Pickups"/>
+		  <frame posX="16" posY="16" width="16" height="16" length="0.2" texture="Pickups"/>
+	  </Animation>
+	  <Animation name="Picked" flags="0">
+		  <frame posX="32" posY="16" width="32" height="16" length="0" texture="Pickups"/>
+	  </Animation>
+  </AnimationSet>
+  <AnimationSet name="Chocolate">
+	  <Animation name="Base" flags="1">
+		  <frame posX="0" posY="32" width="16" height="16" length="0.2" texture="Pickups"/>
+		  <frame posX="16" posY="32" width="16" height="16" length="0.2" texture="Pickups"/>
+	  </Animation>
+	  <Animation name="Picked" flags="0">
+		  <frame posX="32" posY="32" width="32" height="16" length="0" texture="Pickups"/>
+	  </Animation>
+  </AnimationSet>
+  <AnimationSet name="Jawbreaker">
+	  <Animation name="Base" flags="1">
+		  <frame posX="0" posY="48" width="16" height="16" length="0.2" texture="Pickups"/>
+		  <frame posX="16" posY="48" width="16" height="16" length="0.2" texture="Pickups"/>
+	  </Animation>
+	  <Animation name="Picked" flags="0">
+		  <frame posX="32" posY="48" width="32" height="16" length="0" texture="Pickups"/>
+	  </Animation>
+  </AnimationSet>
+  <AnimationSet name="Doughnut">
+	  <Animation name="Base" flags="1">
+		  <frame posX="0" posY="64" width="16" height="16" length="0.2" texture="Pickups"/>
+		  <frame posX="16" posY="64" width="16" height="16" length="0.2" texture="Pickups"/>
+	  </Animation>
+	  <Animation name="Picked" flags="0">
+		  <frame posX="32" posY="64" width="32" height="16" length="0" texture="Pickups"/>
+	  </Animation>
+  </AnimationSet>
+  <AnimationSet name="Icecream">
+	  <Animation name="Base" flags="1">
+		  <frame posX="0" posY="80" width="16" height="16" length="0.2" texture="Pickups"/>
+		  <frame posX="16" posY="80" width="16" height="16" length="0.2" texture="Pickups"/>
+	  </Animation>
+	  <Animation name="Picked" flags="0">
+		  <frame posX="32" posY="80" width="32" height="16" length="0" texture="Pickups"/>
+	  </Animation>
+  </AnimationSet>
+  <AnimationSet name="Gun">
+	  <Animation name="Base" flags="1">
+		  <frame posX="0" posY="96" width="16" height="16" length="0.2" texture="Pickups"/>
+		  <frame posX="16" posY="96" width="16" height="16" length="0.2" texture="Pickups"/>
+	  </Animation>
+	  <Animation name="Picked" flags="0">
+		  <frame posX="32" posY="96" width="32" height="16" length="0" texture="Pickups"/>
+	  </Animation>
+  </AnimationSet>
+  <AnimationSet name="GemGreen">
+	  <Animation name="Base" flags="1">
+		  <frame posX="0" posY="112" width="16" height="16" length="0.2" texture="Pickups"/>
+		  <frame posX="16" posY="112" width="16" height="16" length="0.2" texture="Pickups"/>
+	  </Animation>
+	  <Animation name="Picked" flags="0">
+		  <frame posX="32" posY="112" width="32" height="16" length="0" texture="Pickups"/>
+	  </Animation>
+  </AnimationSet>
+  <AnimationSet name="GemBlue">
+	  <Animation name="Base" flags="1">
+		  <frame posX="0" posY="128" width="16" height="16" length="0.2" texture="Pickups"/>
+		  <frame posX="16" posY="128" width="16" height="16" length="0.2" texture="Pickups"/>
+	  </Animation>
+	  <Animation name="Picked" flags="0">
+		  <frame posX="32" posY="128" width="32" height="16" length="0" texture="Pickups"/>
+	  </Animation>
+  </AnimationSet>
+  <AnimationSet name="GemYellow">
+	  <Animation name="Base" flags="1">
+		  <frame posX="0" posY="144" width="16" height="16" length="0.2" texture="Pickups"/>
+		  <frame posX="16" posY="144" width="16" height="16" length="0.2" texture="Pickups"/>
+	  </Animation>
+	  <Animation name="Picked" flags="0">
+		  <frame posX="32" posY="144" width="32" height="16" length="0" texture="Pickups"/>
+	  </Animation>
+  </AnimationSet>
+  <AnimationSet name="GemRed">
+	  <Animation name="Base" flags="1">
+		  <frame posX="0" posY="160" width="16" height="16" length="0.2" texture="Pickups"/>
+		  <frame posX="16" posY="160" width="16" height="16" length="0.2" texture="Pickups"/>
+	  </Animation>
+	  <Animation name="Picked" flags="0">
+		  <frame posX="32" posY="160" width="32" height="16" length="0" texture="Pickups"/>
+	  </Animation>
+  </AnimationSet>
+  <AnimationSet name="Life">
+	  <Animation name="Base" flags="1">
+		  <frame posX="0" posY="176" width="16" height="16" length="0.2" texture="Pickups"/>
+		  <frame posX="16" posY="176" width="16" height="16" length="0.2" texture="Pickups"/>
+	  </Animation>
+	  <Animation name="Picked" flags="0">
+		  <frame posX="32" posY="176" width="32" height="16" length="0" texture="Pickups"/>
+	  </Animation>
+  </AnimationSet>
+</Animations>

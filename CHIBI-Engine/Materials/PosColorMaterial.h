@@ -4,6 +4,7 @@
 // PosNormTexMaterial Class									
 //-----------------------------------------------------
 
+//!A material that uses the flat color shader
 class PosColorMaterial : public BaseMaterial
 {
 public:

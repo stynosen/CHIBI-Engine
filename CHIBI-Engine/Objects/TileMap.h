@@ -12,7 +12,7 @@
 
 #include "Materials/TileMaterial.h"
 
-
+//!This struct contains all data of a tile
 struct Tile
 {
 	Tile() 
@@ -22,23 +22,24 @@ struct Tile
 		pos				= Vector2();
 		textureTag		= _T("");
 		drawRect		= Rect();
-		collData[0]		= -1;
-		collData[1]		= -1;
-		collData[2]		= -1;
-		collData[3]		= -1;
 	};
 
+	//!Retrieve the position of the tile in world-space
 	Vector2	GetTilePos(int tileSize);
-	void	BakeCollision();
 
-	int				posId; //unique int that contain the X pos, Y pos and layer information
-	Vector2			pos;   //the drawing position in pixels
+	//!Unique int that contain the X position, Y position and layer information
+	int				posId;
+	//!The drawing position in wold-space in pixels
+	Vector2			pos; 
+	//!The layer where the tile is drawn upon
 	int				layer;
+	//!The tag of the texture that will be used to draw the tile
 	tstring			textureTag;
+	//!The part of the texture is is drawn on the tile
 	Rect			drawRect;
-	int				collData[4];
 };
 
+//!The data that is used to draw the tiles instanced
 struct InstanceData
 {
 	InstanceData(const tstring& tileset, const int layerId, const int instId)
@@ -55,32 +56,46 @@ struct InstanceData
 		instanceId = -1;
 	}
 
+	//!The tag of the tileset that is used in this instance buffer
 	tstring		tileSet;
+	//!The layer of the instance buffer
 	int			layer;
+	//!The if of the instance buffer
 	int			instanceId;
 };
 
+//!The GameObject that is responsible for drawing all the tiles instanced
+/*!Pretty advanced, not for the faint of heart!*/
 class TileMap : public GameObject
 {
 public:
+	//!How big should a buffer be at initialization (width*height of a map)
 	static const int	INITIAL_BUFFER_SIZE = 10000;
+	//!Maximum number of layers
 	static const int	MAX_LAYERS = 5;
 
 	TileMap(int tileSize);
 	virtual			~TileMap(void);
 	
-	virtual bool	Initialise();
+	virtual bool	Initialize();
 
 	virtual void	Paint();
+	//!Paint all buffers on a certain layer, with a certain opacity
 	void			Paint(const int layer, const float alpha = 1.0f);
+	//!Paint the buffer with a certain tileset on a certain layer, with a certain opacity
 	void			Paint(const tstring& tileset, const int layer, const float alpha = 1.0f);
 
+	//!Add a tile to the map
 	void			AddTile(const int drawPriority, const Tile& newTile);
+	//!Remove a tile from the map
 	void			RemoveTile(const int posId);
 	
+	//!Update the buffer with given tileset and layer
 	void			UpdateInstanceBuffer(const tstring& tileSet,const int layer);
+	//!Update all instance buffers
 	void			UpdateInstanceBuffers();
 
+	//!Get the material that is used to draw all tiles with a certain tileset
 	TileMaterial*	GetMaterial(const tstring& tileSettag);
 
 private:
@@ -93,19 +108,19 @@ private:
 	ID3D10Buffer										*m_IndexBufferPtr;
 	vector<DWORD>										m_VecIndices;
 
-	//A material for each texture
+	//!A material for each texture
 	map<tstring,TileMaterial*>							m_MaterialPtr;
 
-	//texturetag(tstring) )-> vector of layers -> instance buffer of the layer
+	//!texturetag(tstring) )-> vector of layers -> instance buffer of the layer
 	map<tstring,vector<ID3D10Buffer*>>					m_InstanceBufferPtr;
 
-	//textureTag(tstring)-> vector of layers -> vector of instance data
+	//!textureTag(tstring)-> vector of layers -> vector of instance data
 	map<tstring,vector<vector<VertexTileInstanceData>>>	m_TileInstanceData;
 	
-	//posId (int) -> textureTag(tstring),layer(int),instanceId(int)
+	//!posId (int) -> textureTag(tstring),layer(int),instanceId(int)
 	map<int,InstanceData>								m_TilePosToIndex;
 
-	//textureTag(tstring) -> vector of layers -> nr of tiles on that layer
+	//!textureTag(tstring) -> vector of layers -> number of tiles on that layer
 	map<tstring,vector<int>>							m_NrOfTiles;
 
 	int													m_TileSize;

@@ -6,6 +6,7 @@
 // PosNormTexMaterial Class									
 //-----------------------------------------------------
 
+//!A material that uses the tile material, and supports instanced drawing
 class TileMaterial : public BaseMaterial
 {
 public:
